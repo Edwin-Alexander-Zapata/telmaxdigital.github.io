@@ -1,0 +1,122 @@
+:root{
+    /* Phantone */
+    --Col_coffi: #F2B988;
+    --Col_orang: #F24405;
+    --Col_marron: #8C3414;
+    --Col_whitelx: #F2F2F2;
+    --Col_blacktelx: #262626;
+    --Col_blacklog: #202020;
+    --font_telmax: 'Open Sans', sans-serif;
+    --font_subtitle: 'Merriweather Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+	margin: 0;
+}
+.h33{
+    margin: 100px 0 20px;
+    text-align: center;
+    font-size: 35px;
+    color: var(--Col_orang);
+}
+.line{
+    border-bottom: 2px solid var(--Col_blacktelx) ;
+}
+#guia:target,
+#guia2:target,
+#guia3:target{
+    padding-top: 120px;
+}
+
+.father_container{
+    margin: 0 0 100px;    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px 15px;
+    width: 100%;
+    /* height: 100%; */
+    font-family: var(--font_telmax);
+}
+.card_product{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 300px;
+    height: 550px;
+    border-radius: 10px;
+    border: 0.5px solid var(--Col_orang);
+    background-color: var(--Col_whitelx);
+}
+.title_product{
+    padding: 10px 0;
+    color: var(--Col_orang)
+}
+.title_product,
+.cash_imtem, 
+.btn_product{
+    margin: 0 auto;
+}
+.cont_img{
+    margin: 0 auto;
+    width:95%;
+    height: 45%;
+    background-color: #003049;
+}
+.detail_product{
+    margin: 10px auto;
+}
+button {
+    position: relative;
+    width: 240px;
+    padding: 20px;
+    margin: 10px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.4s ease-in;
+    z-index: 1;
+}
+.btn_product{
+    margin-top: 10px;
+}
+button::before,
+button::after {
+    background: green;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+.buy{
+    padding: 8px 30px;
+    border-radius: 10px;
+    /* background-color: green; */
+	color: green;
+    border: 1px solid;
+    font-family: var(--font_telmax);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+.buy::after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition-duration: 0.6s;
+    width: 0;
+}
+.buy:hover::after {
+    width: 100%;
+}
+.buy:hover{
+    color: var(--Col_whitelx);
+}
+@media screen and (max-width: 768px){
+    .title_product{
+        text-align: center;
+    }
+    .btn_product{
+        padding: 5px 0 20px;
+    }
+}

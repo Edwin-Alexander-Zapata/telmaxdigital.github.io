@@ -1,0 +1,95 @@
+/* @font-face {
+    font-family: font-telmax;
+    src: url(/assets/webfonts/fa-brands-400.ttf);
+    src: url(/assets/webfonts/fa-brands-400.eot);
+    src: url(/assets/webfonts/fa-regular-400.woff2)
+} */
+/* phantone telmex */
+:root{
+    /* Phantone */
+    --Col_coffi: #F2B988;
+    --Col_orang: #F24405;
+    --Col_marron: #8C3414;
+    --Col_whitelx: #F2F2F2;
+    --Col_blacktelx: #262626;
+    --Col_blacklog: #202020;
+    --font_telmax: 'Open Sans', sans-serif;
+    --font_subtitle: 'Merriweather Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font_telmax);
+    background-color: var(--Col_whitelx);
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    /* padding: 5px 0; */
+    top: 0;
+    width: 100%;
+    background-color: var(--Col_blacklog);
+    z-index: 1;
+}
+
+.logo{
+    width: auto;
+height: 80px;
+
+
+}
+/* menu del menu prinsipal */
+.cont_menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.menu{
+    display: flex;
+}
+.active{
+    background-color: var(--Col_orang);
+    padding: 5px;
+    border-radius: 5px;
+}
+.menu_item{
+    position: relative;
+}
+.menu, .submenu{
+    list-style: none;
+}
+.menu_item, .menu_link{
+    text-decoration: none;
+    color: aliceblue;
+    margin:  8px;
+}
+.submenu{
+    position: absolute; 
+    padding: 10px 50px ;
+    border-radius: 5px;
+    display: none;
+    background-color: var(--Col_blacktelx)
+    /* TODO: INVESTIGAR POR EL MARGIN INABILITA LAS OPCIONES DEL MENU */
+}
+.menu_item:hover .submenu{
+    display: block;
+}
+.lnk2{
+    margin: 10px 0;
+}
+.menu_link:hover{
+    background-color: var(--Col_orang);
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.icon_nav{
+    font-size: 30px;
+    border: 1px solid var(--Col_orang);
+    border-radius: 5px;
+    display: none;
+}
